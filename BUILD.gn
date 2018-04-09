@@ -1,0 +1,12 @@
+
+config("concurrentqueue_config") {
+  include_dirs = [ "." ]
+}
+
+source_set("concurrentqueue") {
+  sources = [
+    "concurrentqueue.h",
+    "blockingconcurrentqueue.h",
+  ]
+  public_configs = [ ":concurrentqueue_config" ]
+}
